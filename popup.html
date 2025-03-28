@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Google Search Operators</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced Google Search</h1>
+    <div class="header-icons">
+      <!-- Help icon -->
+      <span id="helpIcon" class="help-icon" title="Help info">?</span>
+      <!-- History icon -->
+      <span id="historyIcon" class="history-icon" title="Show History">&#x1F551;</span>
+    </div>
+    <form id="searchForm">
+      <div class="operator-group">
+        <label for="operatorSelect">Select Operator:</label>
+        <select id="operatorSelect" name="operator">
+          <option value="site">site:example.com</option>
+          <option value="cache">cache:example.com</option>
+          <option value="related">related:example.com</option>
+          <option value="intitle">intitle:"keyword"</option>
+          <option value="allintitle">allintitle:keyword1 keyword2</option>
+          <option value="inurl">inurl:"keyword"</option>
+          <option value="allinurl">allinurl:keyword1 keyword2</option>
+          <option value="intext">intext:"keyword"</option>
+          <option value="allintext">allintext:keyword1 keyword2</option>
+          <option value="filetype">filetype: (choose file type &amp; keyword)</option>
+          <option value="exclude">"keyword" -site:example.com</option>
+          <option value="subdirectory">site:example.com/blog</option>
+          <option value="daterange">before/after (with keyword)</option>
+          <option value="oroperator">"keyword" OR "keyword2"</option>
+          <option value="inanchor">site:example.com inanchor:"keyword"</option>
+          <option value="subdomain">site:example.com -inurl:www</option>
+          <option value="broken">site:example.com intitle:"404"</option>
+          <option value="guestposting">"write for us" (choose multiple TLDs)</option>
+          <option value="wordpress">"keyword" + "powered by WordPress"</option>
+          <option value="techaudit">site:example.com ext:css OR ext:js</option>
+          <!-- New Operators -->
+          <option value="define">define: (get definition)</option>
+          <option value="around">AROUND(n) (keywords near each other)</option>
+          <option value="link">link: (pages linking to)</option>
+        </select>
+      </div>
+
+      <div id="inputFields">
+        <!-- Dynamic fields will be inserted here based on the selected operator -->
+      </div>
+
+      <button type="submit">Search on Google</button>
+    </form>
+
+    <!-- History container (hidden by default) -->
+    <div id="historyContainer" class="history-container" style="display:none;">
+      <h2>Search History</h2>
+      <ul id="historyList"></ul>
+      <button id="clearHistory">Clear History</button>
+    </div>
+  </div>
+
+  <!-- Tooltip element -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
