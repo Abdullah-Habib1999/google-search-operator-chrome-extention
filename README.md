@@ -19,7 +19,16 @@ Welcome to the **Advanced Google Search Operators** Chrome Extension! This tool 
 - **Modern, Attractive UI:**  
   Enjoy a sleek, responsive design with card-like layout, interactive icons, and smooth transitions.
 
-## Installation
+## Installation in Chrome
+
+- Download the repository
+- Extract .zip file
+- Open Google Chrome and type chrome://extensions/ into the address bar, then press Enter.
+- In the top-right corner of the Extensions page, toggle the "Developer mode" switch to enable it.
+- Click the "Load unpacked" button.
+- In the file dialog that appears, navigate to the folder where you downloaded the repository and select it.
+- The extension should now appear among your installed extensions.
+- Start Using the Extension
 
 1. **Clone the Repository:**
 
